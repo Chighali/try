@@ -2,7 +2,7 @@
 const cartBtn = document.querySelector('.cart-btn');
 const closeCartBtn = document.querySelector('.close-cart');
 const clearCartBtn = document.querySelector('.clear-cart');
-const cartDOM = document.querySelector('.clear-cart');
+const cartDOM = document.querySelector('.cart');
 const cartOverlay = document.querySelector('.cart-overlay');
 const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
@@ -92,6 +92,7 @@ class UI {
                     //display cart item
                     this.addCartItem(cartItem)
                     //show the cart
+                    this.showCart()
                 });
             
         })
@@ -126,6 +127,10 @@ class UI {
         `
         cartContent.appendChild(div);
         console.log(cartContent)
+    }
+    showCart(){
+        cartOverlay.classList.add('transparentBcg');
+        cartDOM.classList.add('showCart');
     }
     
 
